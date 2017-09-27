@@ -15,11 +15,7 @@ public class Preparacao {
 	}
 	
 	public enum TecnicaCoccao {
-		CONDUCAO,CONVCCAO,GRELHAR,ASSAR,GUISAR,BRASEAR,SALTEAR,CALOR_SECO,CALOR_UMIDO,FRITAR,REFOGAR,RADIACAO;
-	}
-	
-	public enum AspectoGorduroso {
-		GORDUROSO,MUITO_GORDUROSO,POUCO_GORDUROSO;
+		CONDUCAO,CONVECCAO,GRELHAR,ASSAR,GUISAR,BRASEAR,SALTEAR,CALOR_SECO,CALOR_UMIDO,FRITAR,REFOGAR,RADIACAO;
 	}
 	
 	private String nome;
@@ -27,7 +23,7 @@ public class Preparacao {
 	private GrupoAlimento gpAlimento;
 	private boolean vegetariano;
 	private boolean enxofre;
-	private AspectoGorduroso aspectoGorduroso;
+	private Double aspectoGorduroso;
 	private TecnicaCoccao tecnicaCoccao;
 	
 	public Preparacao() {
@@ -35,10 +31,9 @@ public class Preparacao {
 	}
 	
 	public Preparacao(String nome, Textura textura, GrupoAlimento gpAlimento, boolean vegetariano,
-			boolean enxofre, AspectoGorduroso aspectoGorduroso, TecnicaCoccao tecnicaCoccao) {
+			boolean enxofre, Double aspectoGorduroso, TecnicaCoccao tecnicaCoccao) {
 		super();
 		this.nome = nome;
-
 		this.textura = textura;
 		this.gpAlimento = gpAlimento;
 		this.vegetariano = vegetariano;
@@ -78,10 +73,10 @@ public class Preparacao {
 	public void setEnxofre(boolean enxofre) {
 		this.enxofre = enxofre;
 	}
-	public AspectoGorduroso getAspectoGorduroso() {
+	public Double getAspectoGorduroso() {
 		return aspectoGorduroso;
 	}
-	public void setAspectoGorduroso(AspectoGorduroso aspectoGorduroso) {
+	public void setAspectoGorduroso(Double aspectoGorduroso) {
 		this.aspectoGorduroso = aspectoGorduroso;
 	}
 	public TecnicaCoccao getTecnicaCoacao() {
@@ -90,9 +85,4 @@ public class Preparacao {
 	public void setTecnicaCoccao(TecnicaCoccao tecnicaCoccao) {
 		this.tecnicaCoccao = tecnicaCoccao;
 	}
-	
-	
-	
-	
-	
 }
