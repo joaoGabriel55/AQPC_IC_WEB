@@ -1,17 +1,64 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"> 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
 
 <h:head>
-	
+
 	<link type="text/css" rel="stylesheet"
-	href="materialize/css/materialize.css" />
+		href="materialize/css/materialize.css" />
 
 
-</h:head> 
-<body> 
-	<h1>EAE</h1>
-</body> 
+	<link type="text/css" rel="stylesheet" href="materialize/css/mycss.css" />
+	<title>AQPC</title>
+
+</h:head>
+<body>
+	<nav>
+	<div class="nav-wrapper">
+		<a href="javascript:;" class="brand-logo"
+			style="margin-left: 1%; font-size: 24px;">AQPC - Avaliação
+			Qualitativa das Preparações do Cardápio</a>
+		<ul id="nav-mobile" class="right hide-on-med-and-down">
+			<li><a href="javascript:;"
+				style="font-size: 20px; font-style: italic; font-weight: bold;">UFRN</a></li>
+		</ul>
+	</div>
+	</nav>
+
+	<div class="row" style="margin-left: 25%;">
+		<div class="col s12 m8">
+			<div class="card-panel white"
+				style="margin-top: 5%; padding-bottom: 80%;">
+				<h5>Preencha as informações</h5>
+				<hr></hr>
+				<h:form>
+					<div class="input-field col s10" style="margin-top: 5%;">
+						<h:inputText value="" id="last_name"/> <label
+							for="last_name">Nome do alimento</label>
+					</div>
+				</h:form>
+			</div>
+
+
+
+		</div>
+	</div>
+
+
+
+	<footer class="page-footer">
+	<div class="container">
+		<div class="row"></div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">© 2017 - TADS - Projeto para disciplina
+			de inteligência computacional</div>
+	</div>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="materialize/js/materialize.js"></script>
+</body>
 </html>
