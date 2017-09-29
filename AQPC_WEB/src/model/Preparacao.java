@@ -1,9 +1,29 @@
 package model;
 
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+
 public class Preparacao {
+	
+	
 	public enum Textura {
-		PASTOSO, MACIO;
+		PASTOSO("Pastoso"), 
+		MACIO("Macio");
+		
+		private String label;
+		
+		private Textura (String label) {
+			this.label = label;
+		}
+		
+		public String getLabel() {
+			return label;
+		}
 	}
+	
+//	public Textura[] getLabelTexturas() {
+//		return Textura.values();
+//	}
 	
 	public enum Cor {
 		VERMELHO, VERDE, BRANCO, AMARELO, PRETO, MARROM, LARANJA, ROXO;
@@ -19,11 +39,20 @@ public class Preparacao {
 	}
 	
 	private String nome;
+	
+	@Enumerated(EnumType.STRING)
 	private Textura textura; 
+	
+	@Enumerated(EnumType.STRING)
 	private GrupoAlimento gpAlimento;
+	
 	private boolean vegetariano;
+	
 	private boolean enxofre;
+	
 	private Double aspectoGorduroso;
+
+	@Enumerated(EnumType.STRING)
 	private TecnicaCoccao tecnicaCoccao;
 	
 	public Preparacao() {

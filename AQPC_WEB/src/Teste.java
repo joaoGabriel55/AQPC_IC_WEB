@@ -1,3 +1,4 @@
+import model.Preparacao.TecnicaCoccao;
 import net.sourceforge.jFuzzyLogic.FIS;
 import net.sourceforge.jFuzzyLogic.plot.JFuzzyChart;
 import net.sourceforge.jFuzzyLogic.rule.Variable;
@@ -17,10 +18,12 @@ public class Teste {
         JFuzzyChart.get().chart(fis.getFunctionBlock("aqpc"));
 		
 	    //Seta as entradas para cada variavel linguistica
-//        fis.setVariable("experiencia", 2); 
-//	    fis.setVariable("responsabilidade", 0.65);
-//	    fis.setVariable("digestibilidadeRacao", 0.7);
-//	    fis.setVariable("qualidadeAgua", 0.7);
+        fis.setVariable("cor", 2);
+        fis.setVariable("folhosos", 2);
+        fis.setVariable("tecnicasCoccao", 10);
+        fis.setVariable("enxofre", 5);
+        fis.setVariable("gordura", 35);
+        fis.setVariable("sobremesa", 2);
 	    
 	    //Avalia as regras
 	    fis.evaluate();

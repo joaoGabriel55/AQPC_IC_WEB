@@ -48,30 +48,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- Spring Security -->
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-web</artifactId>
-			<version>3.2.6.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-config</artifactId>
-			<version>3.2.6.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-			<version>3.2.6.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-logging</groupId>
-			<artifactId>commons-logging</artifactId>
-			<version>1.1.1</version>
-		</dependency>
-
-		<!-- End Spring Security -->
-
 		<!-- JSF e JAVA EE -->
 		<dependency>
 			<groupId>javax</groupId>
@@ -96,25 +72,6 @@
 		</dependency>
 		<!-- End JSF e JAVA EE -->
 
-		<!-- Hibernate, MySQL e Validação com anotação -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-search-orm</artifactId>
-			<version>5.7.1.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.6</version>
-			<scope>provided</scope> <!-- Está provided pois precisei colocar essa LIB manualmente no %TOMCAT_HOME%/lib -->
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>5.4.1.Final</version>
-		</dependency>
-		<!-- Hibernate, MySQL e Validação com anotação -->
-
 		<dependency>
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
@@ -127,6 +84,8 @@
 			<version>1.0.8</version>
 			<scope>compile</scope>
 		</dependency>
+		
+		
 
 	</dependencies>
 </project>

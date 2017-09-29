@@ -2,7 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	xmlns:mp="http://primefaces.org/ui/material"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 
@@ -30,18 +34,53 @@
 	<div class="row" style="margin-left: 25%;">
 		<div class="col s12 m8">
 			<div class="card-panel white"
-				style="margin-top: 5%; padding-bottom: 80%;">
-				<h5>Preencha as informações</h5>
+				style="margin-top: 5%; padding-bottom: 125%;">
+				<h5>Informações da Preparação</h5>
 				<hr></hr>
 				<h:form>
 					<div class="input-field col s10" style="margin-top: 5%;">
-						<h:inputText value="" id="last_name"/> <label
-							for="last_name">Nome do alimento</label>
+						<h:inputText value="" id="preparacao" />
+						<label for="preparacao">Nome da Preparação</label>
 					</div>
+					<div class="input-field col s10" style="margin-top: 5%;">
+
+						<h:selectOneMenu value="#{preparacaoMBean.preparacao.textura}">
+							<f:selectItem itemLabel="Selecione..." />
+							<f:selectItems value="#{preparacaoMBean.getLabelTexturas()}"
+								var="teste" itemLabel="#{teste.label}" />
+						</h:selectOneMenu>
+
+
+					</div>
+
+
+
+					<!-- <div class="input-field col s10" style="margin-top: 5%;">
+						<h:inputText value="" id="grupoAli" />
+						<label for="grupoAli">Grupo do Alimento</label>
+					</div>
+
+					<div class="input-field col s10" style="margin-top: 5%;">
+						<h:inputText value="" id="vegeta" />
+						<label for="vegeta">Vegetariano</label>
+					</div>
+
+					<div class="input-field col s10" style="margin-top: 5%;">
+						<h:inputText value="" id="exofre" />
+						<label for="exofre">Rico em Exofre</label>
+					</div>
+
+					<div class="input-field col s10" style="margin-top: 5%;">
+						<h:inputText value="" id="gorduroso" />
+						<label for="gorduroso">Aspecto Gorduroso</label>
+					</div>
+
+					<div class="input-field col s10" style="margin-top: 5%;">
+						<h:inputText value="" id="tecnicCoc" />
+						<label for="tecnicCoc">Técnica de Coccção</label>
+					</div> -->
 				</h:form>
 			</div>
-
-
 
 		</div>
 	</div>
