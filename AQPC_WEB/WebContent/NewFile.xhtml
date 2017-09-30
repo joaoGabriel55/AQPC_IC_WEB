@@ -3,19 +3,41 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:o="http://omnifaces.org/ui"
-	xmlns:of="http://omnifaces.org/functions">
+	xmlns:p="http://primefaces.org/ui">
 <h:head></h:head>
 <body>
 	<h:form>
-
-
-		<h:selectOneMenu value="#{preparacaoMBean.preparacao.textura}">
-			<f:selectItem itemLabel="Selecione..."/>
-			<f:selectItems value="#{preparacaoMBean.getLabelTexturas()}" var="teste"
-			itemLabel="#{teste.label}"/>
-		</h:selectOneMenu>
-
+		<!-- <h4>Qual o nome da preparação? </h4>
+		<h:inputText value="#{preparacaoMBean.preparacao.nome}" /> -->
+		
+		<h4>Qual a quantidade de cores? </h4>
+		<h:inputText value="#{preparacaoMBean.preparacao.cor}" />
+		
+		<h4>Quantos alimentos são ricos em enxofre? </h4>
+		<h:inputText value="#{preparacaoMBean.preparacao.enxofre}" />
+		
+		<h4>Qual a quantidade de folhosos que existe na preparação? </h4>
+		<h:inputText value="#{preparacaoMBean.preparacao.folhosos}" />
+		
+		<h4>Tipo de tecnica de cocão: </h4> 
+		<h:inputText value="#{preparacaoMBean.preparacao.tecnicaCoccao}" />
+		<!-- <h:selectOneMenu id="tipoTecnica" value="#{preparacaoMBean.preparacao.tecnicaCoccao}" style="width:300px"> 
+        	<f:selectItem itemLabel="Selecione um tipo de tecnicas de cocção"/>        
+            <f:selectItems  value="#{preparacaoMBean.tipoCoccao}" var="tipoTecnica" itemLabel="#{tipoTecnica}" itemValue="#{tipoTecnica}"/>           
+        </h:selectOneMenu> -->
+       	<h4>Tipo de sobremesa: </h4> 
+       	<h:inputText value="#{preparacaoMBean.preparacao.sobremesa}" />
+		<!-- <h:selectOneMenu id="tipoSobremesa" value="#{preparacaoMBean.preparacao.sobremesa}" style="width:300px"> 
+        	<f:selectItem itemLabel="Selecione um tipo de sobremesa"/>        
+            <f:selectItems  value="#{preparacaoMBean.tipoSobre}" var="tipoSobremesa" itemLabel="#{tipoSobremesa}" itemValue="#{tipoSobremesa}"/>           
+        </h:selectOneMenu>   -->		
+				
+		<h4>Qual a porcetagem de gordura da preparação? </h4>
+		<h:inputText value="#{preparacaoMBean.preparacao.aspectoGorduroso}" />
+		
+		<br />	<br />		
+		<h:commandButton action="#{preparacaoMBean.calculaFuzzy()}" value="Calcular preparação" />
+		
 	</h:form>
 </body>
 </html>

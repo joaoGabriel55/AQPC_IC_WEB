@@ -1,117 +1,89 @@
 package model;
 
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-
 public class Preparacao {
-	
-	
-	public enum Textura {
-		PASTOSO("Pastoso"), 
-		MACIO("Macio");
-		
-		private String label;
-		
-		private Textura (String label) {
-			this.label = label;
-		}
-		
-		public String getLabel() {
-			return label;
-		}
-	}
-	
-//	public Textura[] getLabelTexturas() {
-//		return Textura.values();
-//	}
-	
-	public enum Cor {
-		VERMELHO, VERDE, BRANCO, AMARELO, PRETO, MARROM, LARANJA, ROXO;
-	}
-	
-	public enum GrupoAlimento {
-		DOCE, LEGUME, CARNE_VERMELHA, CARNE_AVE, CARNE_SUINA,FRUTA,INDUSTRIALIZADO,CEREAIS,VERDURAS,LEITE,SUCOS,HORTALICAS,GORDURAS,OLEOS,FRUTOS_MAR,
-		OVOS,MISCELANEAS,NOZES,SEMENTES,PESCADOS;
-	}
-	
-	public enum TecnicaCoccao {
-		CONDUCAO,CONVECCAO,GRELHAR,ASSAR,GUISAR,BRASEAR,SALTEAR,CALOR_SECO,CALOR_UMIDO,FRITAR,REFOGAR,RADIACAO;
-	}
-	
 	private String nome;
 	
-	@Enumerated(EnumType.STRING)
-	private Textura textura; 
+	private double cor;
 	
-	@Enumerated(EnumType.STRING)
-	private GrupoAlimento gpAlimento;
+	private double tecnicaCoccao;
 	
-	private boolean vegetariano;
+	private double sobremesa;
 	
-	private boolean enxofre;
+	private double folhosos;
 	
-	private Double aspectoGorduroso;
-
-	@Enumerated(EnumType.STRING)
-	private TecnicaCoccao tecnicaCoccao;
+	private double enxofre;
+	
+	private double aspectoGorduroso;
 	
 	public Preparacao() {
 		super();
 	}
-	
-	public Preparacao(String nome, Textura textura, GrupoAlimento gpAlimento, boolean vegetariano,
-			boolean enxofre, Double aspectoGorduroso, TecnicaCoccao tecnicaCoccao) {
+
+	public Preparacao(String nome, double cor, double tecnicaCoccao, double sobremesa, double folhosos, double enxofre,
+			double aspectoGorduroso) {
 		super();
 		this.nome = nome;
-		this.textura = textura;
-		this.gpAlimento = gpAlimento;
-		this.vegetariano = vegetariano;
+		this.cor = cor;
+		this.tecnicaCoccao = tecnicaCoccao;
+		this.sobremesa = sobremesa;
+		this.folhosos = folhosos;
 		this.enxofre = enxofre;
 		this.aspectoGorduroso = aspectoGorduroso;
-		this.tecnicaCoccao = tecnicaCoccao;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	public Textura getTextura() {
-		return textura;
+
+	public double getCor() {
+		return cor;
 	}
-	public void setTextura(Textura textura) {
-		this.textura = textura;
+
+	public void setCor(double cor) {
+		this.cor = cor;
 	}
-	public GrupoAlimento getGpAlimento() {
-		return gpAlimento;
-	}
-	public void setGpAlimento(GrupoAlimento gpAlimento) {
-		this.gpAlimento = gpAlimento;
-	}
-	public boolean isVegetariano() {
-		return vegetariano;
-	}
-	public void setVegetariano(boolean vegetariano) {
-		this.vegetariano = vegetariano;
-	}
-	public boolean isEnxofre() {
-		return enxofre;
-	}
-	public void setEnxofre(boolean enxofre) {
-		this.enxofre = enxofre;
-	}
-	public Double getAspectoGorduroso() {
-		return aspectoGorduroso;
-	}
-	public void setAspectoGorduroso(Double aspectoGorduroso) {
-		this.aspectoGorduroso = aspectoGorduroso;
-	}
-	public TecnicaCoccao getTecnicaCoacao() {
+
+	public double getTecnicaCoccao() {
 		return tecnicaCoccao;
 	}
-	public void setTecnicaCoccao(TecnicaCoccao tecnicaCoccao) {
+
+	public void setTecnicaCoccao(double tecnicaCoccao) {
 		this.tecnicaCoccao = tecnicaCoccao;
+	}
+
+	public double getSobremesa() {
+		return sobremesa;
+	}
+
+	public void setSobremesa(double sobremesa) {
+		this.sobremesa = sobremesa;
+	}
+
+	public double getFolhosos() {
+		return folhosos;
+	}
+
+	public void setFolhosos(double folhosos) {
+		this.folhosos = folhosos;
+	}
+
+	public double getEnxofre() {
+		return enxofre;
+	}
+
+	public void setEnxofre(double enxofre) {
+		this.enxofre = enxofre;
+	}
+
+	public double getAspectoGorduroso() {
+		return aspectoGorduroso;
+	}
+
+	public void setAspectoGorduroso(double aspectoGorduroso) {
+		this.aspectoGorduroso = aspectoGorduroso;
 	}
 }

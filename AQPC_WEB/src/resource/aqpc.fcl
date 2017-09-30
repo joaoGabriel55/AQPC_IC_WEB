@@ -84,46 +84,36 @@ RULEBLOCK NO1
 	RULE 10: IF tecnicasCoccao IS GUISAR AND cor IS muito AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS medio THEN avaliacao IS mediano;
 	RULE 11: IF tecnicasCoccao IS GUISAR AND cor IS pouco AND enxofre IS muito AND sobremesa IS doce AND folhosos IS pouco AND gordura IS medio THEN avaliacao IS inadequado;	
 	//REGRA 12 MELHOR E ESPECIFICA
-	RULE 12: IF tecnicasCoccao IS GUISAR AND cor IS muito OR cor IS pouco AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS pouco THEN avaliacao IS adequado;
+	RULE 12: IF tecnicasCoccao IS GUISAR AND (cor IS muito OR cor IS pouco) AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS pouco THEN avaliacao IS adequado;
 	
 	RULE 13: IF tecnicasCoccao IS BRASEAR AND cor IS muito AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS medio THEN avaliacao IS mediano;
 	RULE 14: IF tecnicasCoccao IS BRASEAR AND cor IS pouco AND enxofre IS muito AND sobremesa IS doce AND folhosos IS pouco AND gordura IS medio THEN avaliacao IS inadequado;
-	RULE 15: IF tecnicasCoccao IS BRASEAR AND cor IS muito OR cor IS pouco AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS pouco THEN avaliacao IS adequado;
+	RULE 15: IF tecnicasCoccao IS BRASEAR AND (cor IS muito OR cor IS pouco) AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS pouco THEN avaliacao IS adequado;
 	
 	RULE 16: IF tecnicasCoccao IS SALTEAR AND cor IS muito AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS medio THEN avaliacao IS mediano;
 	RULE 17: IF tecnicasCoccao IS SALTEAR AND cor IS pouco AND enxofre IS muito AND sobremesa IS doce AND folhosos IS pouco AND gordura IS medio THEN avaliacao IS inadequado;
-	RULE 18: IF tecnicasCoccao IS SALTEAR AND cor IS muito OR cor IS pouco AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS pouco THEN avaliacao IS adequado;
+	RULE 18: IF tecnicasCoccao IS SALTEAR AND (cor IS muito OR cor IS pouco) AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS pouco THEN avaliacao IS adequado;
 	
 	RULE 19: IF tecnicasCoccao IS CALOR_SECO AND cor IS muito AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS medio THEN avaliacao IS mediano;
 	RULE 20: IF tecnicasCoccao IS CALOR_SECO AND cor IS pouco AND enxofre IS muito AND sobremesa IS doce AND folhosos IS pouco AND gordura IS medio THEN avaliacao IS inadequado;
-	RULE 21: IF tecnicasCoccao IS CALOR_SECO AND cor IS muito OR cor IS pouco AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS pouco THEN avaliacao IS adequado;
+	RULE 21: IF tecnicasCoccao IS CALOR_SECO AND (cor IS muito OR cor IS pouco) AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS pouco THEN avaliacao IS adequado;
 	
 	RULE 22: IF tecnicasCoccao IS CALOR_UMIDO AND cor IS muito AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS medio THEN avaliacao IS mediano;
 	RULE 23: IF tecnicasCoccao IS CALOR_UMIDO AND cor IS pouco AND enxofre IS muito AND sobremesa IS doce AND folhosos IS pouco AND gordura IS medio THEN avaliacao IS inadequado;
-	RULE 24: IF tecnicasCoccao IS CALOR_UMIDO AND cor IS muito OR cor IS pouco AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS pouco THEN avaliacao IS adequado;
+	RULE 24: IF tecnicasCoccao IS CALOR_UMIDO AND (cor IS muito OR cor IS pouco) AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS pouco THEN avaliacao IS adequado;
 	
 	RULE 25: IF tecnicasCoccao IS FRITAR AND cor IS muito AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS medio THEN avaliacao IS mediano;
 	RULE 26: IF tecnicasCoccao IS FRITAR AND cor IS pouco AND enxofre IS muito AND sobremesa IS doce AND folhosos IS pouco AND gordura IS medio THEN avaliacao IS inadequado;
-	RULE 27: IF tecnicasCoccao IS FRITAR AND cor IS muito OR cor IS pouco AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS pouco THEN avaliacao IS adequado;
+	RULE 27: IF tecnicasCoccao IS FRITAR AND (cor IS muito OR cor IS pouco) AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS pouco THEN avaliacao IS adequado;
 	
 	RULE 28: IF tecnicasCoccao IS REFOGAR AND cor IS muito AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS medio THEN avaliacao IS mediano;
 	RULE 29: IF tecnicasCoccao IS REFOGAR AND cor IS pouco AND enxofre IS muito AND sobremesa IS doce AND folhosos IS pouco AND gordura IS medio THEN avaliacao IS inadequado;
-	RULE 30: IF tecnicasCoccao IS REFOGAR AND cor IS muito OR cor IS pouco AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS pouco THEN avaliacao IS adequado;
+	RULE 30: IF tecnicasCoccao IS REFOGAR AND (cor IS muito OR cor IS pouco) AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS pouco THEN avaliacao IS adequado;
 	
 	RULE 31: IF tecnicasCoccao IS RADIACAO AND cor IS muito AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS medio THEN avaliacao IS mediano;
 	RULE 32: IF tecnicasCoccao IS RADIACAO AND cor IS pouco AND enxofre IS muito AND sobremesa IS doce AND folhosos IS pouco AND gordura IS medio THEN avaliacao IS inadequado;
-	RULE 33: IF tecnicasCoccao IS RADIACAO AND cor IS muito OR cor IS pouco AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS pouco THEN avaliacao IS adequado;
+	RULE 33: IF tecnicasCoccao IS RADIACAO AND (cor IS muito OR cor IS pouco) AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS pouco THEN avaliacao IS adequado;
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
 END_RULEBLOCK
 
 END_FUNCTION_BLOCK
