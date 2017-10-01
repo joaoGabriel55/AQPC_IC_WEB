@@ -19,6 +19,7 @@ import javax.swing.ImageIcon;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
 import net.sourceforge.jFuzzyLogic.FIS;
+import net.sourceforge.jFuzzyLogic.JFuzzyLogic;
 import net.sourceforge.jFuzzyLogic.plot.JFuzzyChart;
 import net.sourceforge.jFuzzyLogic.rule.Variable;
 
@@ -265,7 +266,7 @@ public class Principal {
 		btnNewButton.addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JFuzzyChart.get().chart(fis.getFunctionBlock("aqpc"));
+//				JFuzzyChart.get().chart(fis.getFunctionBlock("aqpc"));
 				
 				String cor = textField.getText();							
 				String folhosos = textField_1.getText();
@@ -284,10 +285,16 @@ public class Principal {
 		        fis.evaluate();
 
 		        Variable aqpc = fis.getFunctionBlock("aqpc").getVariable("avaliacao");
-		        JFuzzyChart.get().chart(aqpc, aqpc.getDefuzzifier(), true);		        
+//		        JFuzzyChart.get().chart(aqpc, aqpc.getDefuzzifier(), true);		
 		        frame.setVisible(false);
 		        
-		       
+		        if(aqpc.getDefuzzifier().defuzzify() <= 30){
+		        	JOptionPane.showMessageDialog(lblNewLabel, "Avaliação é inadequado");
+		        }else if(aqpc.getDefuzzifier().defuzzify() > 30 && aqpc.getDefuzzifier().defuzzify() < 60){
+		        	JOptionPane.showMessageDialog(lblNewLabel, "Avaliação é mediano");
+		        }else {
+		        	JOptionPane.showMessageDialog(lblNewLabel, "Avaliação é adequado");
+		        }
 			}
 		});
 	}
