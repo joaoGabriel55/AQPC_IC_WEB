@@ -332,6 +332,9 @@ public class Principal2 {
 				} else if (aqpc.getDefuzzifier().defuzzify() > 60) {
 					JOptionPane.showMessageDialog(lblNewLabel,
 							"Avaliação é adequado\nA porcentagem é: " + teste.getText());
+				}else{
+					JOptionPane.showMessageDialog(lblNewLabel,
+							"Os dados inseridos estão invalidos ou incorretos!");
 				}
 			}
 		});

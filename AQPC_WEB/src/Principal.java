@@ -1,14 +1,11 @@
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.JLabel;	
 import javax.swing.JOptionPane;
 
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.text.DecimalFormat;
@@ -20,8 +17,6 @@ import javax.swing.ImageIcon;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
 import net.sourceforge.jFuzzyLogic.FIS;
-import net.sourceforge.jFuzzyLogic.JFuzzyLogic;
-import net.sourceforge.jFuzzyLogic.plot.JFuzzyChart;
 import net.sourceforge.jFuzzyLogic.rule.Variable;
 
 import javax.swing.JTextField;
@@ -298,6 +293,9 @@ public class Principal {
 		        	JOptionPane.showMessageDialog(lblNewLabel, "Avaliação é mediano\nA porcentagem é: "+teste.getText());
 		        }else if (aqpc.getDefuzzifier().defuzzify() > 60){
 		        	JOptionPane.showMessageDialog(lblNewLabel, "Avaliação é adequado\nA porcentagem é: "+teste.getText());
+		        }else{
+		        	JOptionPane.showMessageDialog(lblNewLabel,
+							"Os dados inseridos estão invalidos ou incorretos!");
 		        }
 			}
 		});
