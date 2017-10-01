@@ -81,9 +81,9 @@ RULEBLOCK NO1
 	RULE 8: IF tecnicasCoccao IS ASSAR AND cor IS muito AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS pouco THEN avaliacao IS adequado;    
 	RULE 9: IF tecnicasCoccao IS ASSAR AND cor IS pouco AND enxofre IS muito OR gordura IS medio AND sobremesa IS doce AND folhosos IS pouco THEN avaliacao IS inadequado;
 	
+	
 	RULE 10: IF tecnicasCoccao IS GUISAR AND cor IS muito AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS medio THEN avaliacao IS mediano;
 	RULE 11: IF tecnicasCoccao IS GUISAR AND cor IS pouco AND enxofre IS muito AND sobremesa IS doce AND folhosos IS pouco AND gordura IS medio THEN avaliacao IS inadequado;	
-	//REGRA 12 MELHOR E ESPECIFICA
 	RULE 12: IF tecnicasCoccao IS GUISAR AND (cor IS muito OR cor IS pouco) AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS pouco THEN avaliacao IS adequado;
 	
 	RULE 13: IF tecnicasCoccao IS BRASEAR AND cor IS muito AND enxofre IS pouco AND sobremesa IS fruta AND folhosos IS muito AND gordura IS medio THEN avaliacao IS mediano;

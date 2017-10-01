@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.text.DecimalFormat;
 
 import javax.swing.JButton;
 import javax.swing.GroupLayout;
@@ -288,12 +289,15 @@ public class Principal {
 //		        JFuzzyChart.get().chart(aqpc, aqpc.getDefuzzifier(), true);		
 		        frame.setVisible(false);
 		        
+		        JLabel teste= new JLabel();
+		        DecimalFormat decimalFormat = new DecimalFormat("#.##");
+		        teste.setText(decimalFormat.format(aqpc.getValue())+"");
 		        if(aqpc.getDefuzzifier().defuzzify() <= 30){
-		        	JOptionPane.showMessageDialog(lblNewLabel, "Avaliação é inadequado");
+		        	JOptionPane.showMessageDialog(lblNewLabel, "Avaliação é inadequado\nA porcentagem é: "+teste.getText());
 		        }else if(aqpc.getDefuzzifier().defuzzify() > 30 && aqpc.getDefuzzifier().defuzzify() < 60){
-		        	JOptionPane.showMessageDialog(lblNewLabel, "Avaliação é mediano");
+		        	JOptionPane.showMessageDialog(lblNewLabel, "Avaliação é mediano\nA porcentagem é: "+teste.getText());
 		        }else {
-		        	JOptionPane.showMessageDialog(lblNewLabel, "Avaliação é adequado");
+		        	JOptionPane.showMessageDialog(lblNewLabel, "Avaliação é adequado\nA porcentagem é: "+teste.getText());
 		        }
 			}
 		});
