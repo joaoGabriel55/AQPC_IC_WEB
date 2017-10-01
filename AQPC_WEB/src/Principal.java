@@ -270,10 +270,10 @@ public class Principal {
 //				JFuzzyChart.get().chart(fis.getFunctionBlock("aqpc"));
 				
 				String cor = textField.getText();							
-				String folhosos = textField_1.getText();
-				String tecnicasCoccao = textField_2.getText();
-				String enxofre = textField_3.getText();
-				String gordura = textField_4.getText();
+				String folhosos = textField_2.getText();
+				String tecnicasCoccao = textField_4.getText();
+				String enxofre = textField_1.getText();
+				String gordura = textField_3.getText();
 				String sobremesa = textField_5.getText();
 				
 				fis.setVariable("cor", Double.valueOf(cor));
@@ -296,7 +296,7 @@ public class Principal {
 		        	JOptionPane.showMessageDialog(lblNewLabel, "Avaliação é inadequado\nA porcentagem é: "+teste.getText());
 		        }else if(aqpc.getDefuzzifier().defuzzify() > 30 && aqpc.getDefuzzifier().defuzzify() < 60){
 		        	JOptionPane.showMessageDialog(lblNewLabel, "Avaliação é mediano\nA porcentagem é: "+teste.getText());
-		        }else {
+		        }else if (aqpc.getDefuzzifier().defuzzify() > 60){
 		        	JOptionPane.showMessageDialog(lblNewLabel, "Avaliação é adequado\nA porcentagem é: "+teste.getText());
 		        }
 			}
