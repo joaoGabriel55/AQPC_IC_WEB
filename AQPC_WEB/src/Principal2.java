@@ -46,7 +46,6 @@ public class Principal2 {
 	private JTextField textField_2;
 	private JTextField textField_3;
 	private JTextField textField_4;
-	private JTextField textField_5;
 
 	/**
 	 * Launch the application.
@@ -158,10 +157,6 @@ public class Principal2 {
 						"Os tipos de técnicas de cocção:\n1-CONDUCAO\n2-CONVECCAO\n3-GRELHAR\n4-ASSAR\n5-GUISAR\n6-BRASEAR\n7-SALTEAR\n8-CALOR_SECO\n9-CALOR_UMIDO\n10-FRITAR\n11-REFOGAR\n12-RADIACAO");
 			}
 		});
-		
-		
-		
-		
 
 		JLabel lblVerGrficos = new JLabel("Ver todos os gr\u00E1ficos?");
 		lblVerGrficos.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -177,6 +172,13 @@ public class Principal2 {
 
 		ButtonGroup grupo = new ButtonGroup();
 
+		JRadioButton doce = new JRadioButton("Doce");
+		doce.setSelected(true);
+		JRadioButton fruta = new JRadioButton("Fruta");
+		
+		grupo.add(doce);
+		grupo.add(fruta);
+
 		JLabel lblVerGrficoFinal = new JLabel("Ver gr\u00E1fico final?");
 		lblVerGrficoFinal.setFont(new Font("Tahoma", Font.PLAIN, 14));
 
@@ -184,155 +186,105 @@ public class Principal2 {
 
 		JLabel lblNewLabel_6 = new JLabel("New label");
 		lblNewLabel_6.setIcon(new ImageIcon(Principal2.class.getResource("/img/ufrn.png")));
-		
-		textField_5 = new JTextField();
-		textField_5.setColumns(10);
-		
-		JLabel label = new JLabel();
-		label.setIcon(new ImageIcon("src\\img\\infoTab.png"));
-		label.addMouseListener(new MouseListener() {
-
-			@Override
-			public void mouseReleased(MouseEvent e) {
-				// TODO Auto-generated method stub
-
-			}
-
-			@Override
-			public void mousePressed(MouseEvent e) {
-				// TODO Auto-generated method stub
-
-			}
-
-			@Override
-			public void mouseExited(MouseEvent e) {
-				// TODO Auto-generated method stub
-
-			}
-
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				// TODO Auto-generated method stub
-
-			}
-
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				// TODO Auto-generated method stub
-				JOptionPane.showMessageDialog(lblNewLabel_7,
-						"Tipos de sobremesa:\n1-DOCE\n2-FRUTA");
-			}
-		});
 
 		GroupLayout groupLayout = new GroupLayout(frmAqpc.getContentPane());
-		groupLayout.setHorizontalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(71)
-							.addComponent(lblNewLabel_8))
-						.addGroup(groupLayout.createSequentialGroup()
-							.addGap(72)
-							.addComponent(btnNewButton))
-						.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
-							.addGroup(groupLayout.createSequentialGroup()
-								.addGap(67)
-								.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-									.addGroup(groupLayout.createSequentialGroup()
+		groupLayout.setHorizontalGroup(groupLayout.createParallelGroup(Alignment.LEADING).addGroup(groupLayout
+				.createSequentialGroup()
+				.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addGroup(groupLayout.createSequentialGroup().addGap(71).addComponent(lblNewLabel_8))
+						.addGroup(groupLayout.createSequentialGroup().addGap(72).addComponent(btnNewButton))
+						.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false).addGroup(groupLayout
+								.createSequentialGroup().addGap(67)
+								.addGroup(groupLayout.createParallelGroup(Alignment.LEADING).addGroup(groupLayout
+										.createSequentialGroup()
 										.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-											.addComponent(lblNewLabel_1)
-											.addComponent(lblNewLabel_2)
-											.addComponent(lblNewLabel)
-											.addComponent(lblNewLabel_4)
-											.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
 												.addGroup(groupLayout.createSequentialGroup()
-													.addComponent(lblNewLabel_3)
-													.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-													.addComponent(lblNewLabel_7, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE))
-												.addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
-													.addComponent(lblNewLabel_5)
-													.addGap(18)
-													.addComponent(label, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE))))
+														.addComponent(lblNewLabel_3).addGap(18)
+														.addComponent(lblNewLabel_7, GroupLayout.PREFERRED_SIZE, 19,
+																GroupLayout.PREFERRED_SIZE))
+												.addComponent(lblNewLabel_1).addComponent(lblNewLabel_2)
+												.addComponent(lblNewLabel)
+												.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
+														.addGroup(groupLayout.createSequentialGroup()
+																.addComponent(lblNewLabel_5).addGap(18)
+																.addComponent(doce)
+																.addPreferredGap(ComponentPlacement.RELATED,
+																		GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+																.addComponent(fruta))
+														.addComponent(lblNewLabel_4, Alignment.LEADING)))
 										.addPreferredGap(ComponentPlacement.RELATED, 278, Short.MAX_VALUE)
-										.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-											.addComponent(textField_5, GroupLayout.PREFERRED_SIZE, 59, GroupLayout.PREFERRED_SIZE)
-											.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
+										.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
 												.addComponent(textField_4, 0, 0, Short.MAX_VALUE)
 												.addComponent(textField_3, 0, 0, Short.MAX_VALUE)
 												.addComponent(textField_2, 0, 0, Short.MAX_VALUE)
-												.addComponent(textField_1, 0, 0, Short.MAX_VALUE)
-												.addComponent(textField, GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE))))
-									.addGroup(groupLayout.createSequentialGroup()
+												.addComponent(textField_1, 0, 0, Short.MAX_VALUE).addComponent(
+														textField, GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
+										.addGroup(groupLayout.createSequentialGroup()
+												.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
+														.addComponent(lblVerGrficoFinal, GroupLayout.PREFERRED_SIZE,
+																135, GroupLayout.PREFERRED_SIZE)
+														.addComponent(lblVerGrficos))
+												.addPreferredGap(ComponentPlacement.UNRELATED)
+												.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+														.addComponent(checkBox_1, GroupLayout.PREFERRED_SIZE, 21,
+																GroupLayout.PREFERRED_SIZE)
+														.addComponent(checkBox)))))
+								.addGroup(groupLayout.createSequentialGroup().addGap(52)
 										.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
-											.addComponent(lblVerGrficoFinal, GroupLayout.PREFERRED_SIZE, 135, GroupLayout.PREFERRED_SIZE)
-											.addComponent(lblVerGrficos))
+												.addComponent(lblNewLabel_6, GroupLayout.PREFERRED_SIZE, 134,
+														GroupLayout.PREFERRED_SIZE)
+												.addComponent(separator_2, Alignment.LEADING, GroupLayout.DEFAULT_SIZE,
+														639, Short.MAX_VALUE)
+												.addComponent(separator_1, Alignment.LEADING, GroupLayout.DEFAULT_SIZE,
+														639, Short.MAX_VALUE)))))
+				.addContainerGap(48, Short.MAX_VALUE)));
+		groupLayout.setVerticalGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
+				.addGroup(groupLayout.createSequentialGroup().addGap(22).addComponent(lblNewLabel_8)
+						.addPreferredGap(ComponentPlacement.UNRELATED)
+						.addComponent(separator_1, GroupLayout.PREFERRED_SIZE, 11, GroupLayout.PREFERRED_SIZE)
+						.addGap(18)
+						.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+								.addGroup(groupLayout
+										.createSequentialGroup().addComponent(lblNewLabel).addGap(18)
+										.addComponent(lblNewLabel_1).addGap(18).addComponent(lblNewLabel_2).addGap(18)
+										.addComponent(lblNewLabel_4).addGap(18)
+										.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+												.addComponent(lblNewLabel_7, GroupLayout.PREFERRED_SIZE, 18,
+														GroupLayout.PREFERRED_SIZE)
+												.addComponent(lblNewLabel_3))
+										.addGap(18)
+										.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+												.addComponent(lblNewLabel_5).addComponent(doce).addComponent(fruta))
+										.addGap(13)
+										.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+												.addComponent(checkBox).addComponent(lblVerGrficos))
 										.addPreferredGap(ComponentPlacement.UNRELATED)
 										.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-											.addComponent(checkBox_1, GroupLayout.PREFERRED_SIZE, 21, GroupLayout.PREFERRED_SIZE)
-											.addComponent(checkBox)))))
-							.addGroup(groupLayout.createSequentialGroup()
-								.addGap(52)
-								.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
-									.addComponent(lblNewLabel_6, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE)
-									.addComponent(separator_2, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 639, Short.MAX_VALUE)
-									.addComponent(separator_1, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 639, Short.MAX_VALUE)))))
-					.addContainerGap(48, Short.MAX_VALUE))
-		);
-		groupLayout.setVerticalGroup(
-			groupLayout.createParallelGroup(Alignment.TRAILING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(22)
-					.addComponent(lblNewLabel_8)
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(separator_1, GroupLayout.PREFERRED_SIZE, 11, GroupLayout.PREFERRED_SIZE)
-					.addGap(18)
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addGroup(groupLayout.createSequentialGroup()
-							.addComponent(lblNewLabel)
-							.addGap(18)
-							.addComponent(lblNewLabel_1)
-							.addGap(18)
-							.addComponent(lblNewLabel_2)
-							.addGap(18)
-							.addComponent(lblNewLabel_4)
-							.addGap(18)
-							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-								.addComponent(lblNewLabel_3)
-								.addComponent(lblNewLabel_7, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
-							.addGap(18)
-							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+												.addComponent(checkBox_1, GroupLayout.PREFERRED_SIZE, 17,
+														GroupLayout.PREFERRED_SIZE)
+												.addComponent(lblVerGrficoFinal, GroupLayout.PREFERRED_SIZE, 17,
+														GroupLayout.PREFERRED_SIZE)))
 								.addGroup(groupLayout.createSequentialGroup()
-									.addComponent(lblNewLabel_5)
-									.addGap(13)
-									.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-										.addComponent(checkBox)
-										.addComponent(lblVerGrficos))
-									.addPreferredGap(ComponentPlacement.UNRELATED)
-									.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-										.addComponent(checkBox_1, GroupLayout.PREFERRED_SIZE, 17, GroupLayout.PREFERRED_SIZE)
-										.addComponent(lblVerGrficoFinal, GroupLayout.PREFERRED_SIZE, 17, GroupLayout.PREFERRED_SIZE)))
-								.addComponent(label, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)))
-						.addGroup(groupLayout.createSequentialGroup()
-							.addComponent(textField, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.UNRELATED)
-							.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
-							.addGap(18)
-							.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
-							.addGap(18)
-							.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.UNRELATED)
-							.addComponent(textField_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.UNRELATED)
-							.addComponent(textField_5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-					.addGap(24)
-					.addComponent(separator_2, GroupLayout.PREFERRED_SIZE, 4, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(btnNewButton)
-						.addComponent(lblNewLabel_6, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE))
-					.addContainerGap())
-		);
+										.addComponent(textField, GroupLayout.PREFERRED_SIZE, 20,
+												GroupLayout.PREFERRED_SIZE)
+										.addPreferredGap(ComponentPlacement.UNRELATED)
+										.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 20,
+												GroupLayout.PREFERRED_SIZE)
+										.addGap(18)
+										.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, 20,
+												GroupLayout.PREFERRED_SIZE)
+										.addGap(18)
+										.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, 20,
+												GroupLayout.PREFERRED_SIZE)
+										.addPreferredGap(ComponentPlacement.UNRELATED)
+										.addComponent(textField_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+												GroupLayout.PREFERRED_SIZE)))
+						.addGap(24).addComponent(separator_2, GroupLayout.PREFERRED_SIZE, 4, GroupLayout.PREFERRED_SIZE)
+						.addPreferredGap(ComponentPlacement.UNRELATED)
+						.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE).addComponent(btnNewButton)
+								.addComponent(lblNewLabel_6, GroupLayout.PREFERRED_SIZE, 38,
+										GroupLayout.PREFERRED_SIZE))
+						.addContainerGap()));
 		frmAqpc.getContentPane().setLayout(groupLayout);
 
 		btnNewButton.addActionListener(new ActionListener() {
@@ -346,21 +298,19 @@ public class Principal2 {
 				String tecnicasCoccao = textField_4.getText();
 				String enxofre = textField_1.getText();
 				String gordura = textField_3.getText();
-				String sobremesa = textField_5.getText();
-				
+
 				fis.setVariable("cor", Double.valueOf(cor));
 				fis.setVariable("folhosos", Double.valueOf(folhosos));
 				fis.setVariable("tecnicasCoccao", Double.valueOf(tecnicasCoccao));
 				fis.setVariable("enxofre", Double.valueOf(enxofre));
 				fis.setVariable("gordura", Double.valueOf(gordura));
-				fis.setVariable("sobremesa", Double.valueOf(sobremesa));
 
-				/*if (doce.isSelected() == true)
+				if (doce.isSelected() == true)
 					fis.setVariable("sobremesa", 1);
 
 				if (fruta.isSelected() == true)
 					fis.setVariable("sobremesa", 2);
-*/
+
 				fis.evaluate();
 
 				Variable aqpc = fis.getFunctionBlock("aqpc").getVariable("avaliacao");
